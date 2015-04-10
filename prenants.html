@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prenants</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="banner-container size-640 prenants">
+  <div class="wrapper">
+    <div class="inner">
+      <div class="frame1">
+        <div class="title1"><img src="images/title1.png"></div>
+        <div class="head1"><img src="images/frame1-head.png" /></div>
+        <div class="brain1"><img src="images/frame1-brain.png" /></div>
+        <div class="title2"><img src="images/title2.png"></div>
+        <div class="title3 fit-img"><img src="images/title3.png"></div>
+        <div class="title4"><img src="images/title4.png"></div>
+      </div>
+      <div class="frame2">
+        <div class="tile1"><img src="images/frame2-tile1.png"></div>
+        <div class="maintile"><img src="images/frame2-tile2.png"></div>
+        <div class="tileflash"><img src="images/frame2-tile1.png"></div>
+        <div class="tile2"><img src="images/frame2-tile1.png"></div>
+        <div class="title1 fit-img"><img src="images/frame2-title1.png"></div>
+      </div>
+      <div class="frame3">
+        <div class="maintile"><img src="images/frame3-tile2.png"></div>
+        <div class="tile2"><img src="images/frame2-tile1.png"></div>
+        <div class="title1 fit-img"><img src="images/frame3-title1.png"></div>
+      </div> 
+      <div class="frame4">
+        <div class="maintile"><img src="images/frame4-tile1.png"></div>
+        <div class="tile1"><img src="images/frame2-tile1.png"></div>
+        <div class="tile2"><img src="images/frame2-tile1.png"></div>
+        <div class="medal"><img src="images/frame4-medal.png"></div>
+        <div class="title1 fit-img"><img src="images/frame4-title1.png"></div>
+      </div>
+      <div class="frame5">
+        <div class="maintile"><img src="images/frame5-tile1.png"></div>
+        <div class="tile2"><img src="images/frame2-tile1.png"></div>
+        <div class="title1 fit-img"><img src="images/frame5-title1.png"></div>
+      </div>
+       <div class="frame6">
+        <div class="title2-1"><img src="images/frame6-title1.png"></div>
+        <div class="head2"><img src="images/frame1-head.png" /></div>
+        <div class="brain2"><img src="images/frame1-brain.png" /></div>
+        <div class="title2-2"><img src="images/title2.png"></div>
+        <div class="title2-3 fit-img"><img src="images/title3.png"></div>
+        <div class="title2-4"><img src="images/title4.png"></div>
+        <div class="register fit-img"><img src="images/frame6-registerBtn.png"/></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------ Scripts -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    function init() {
+      // frame 1
+      $('.frame1 .title1').transition({scale: 0.2, duration: 0});
+      $('.frame1 .brain1').transition({scale: 0.8, duration: 0});
+      $('.frame1 .title2').transition({scale: 2, duration: 0});
+      $('.frame1 .title2').css('visibility','visible');
+    }
+
+    // frame 1
+    function frame1() {
+      $('.frame1 .title1').transition({ scale: 1.3}, function(){
+        $('.frame1 .title1').transition({ scale: 1}, 400, 'easeInQuad', function(){
+          $('.frame1 .title1').transition({marginTop: '-130px'});
+          
+          $('.frame1 .head1').css('opacity', 1);
+          $('.frame1 .head1').transition({marginTop: '-130px'}, 400);
+          
+          $('.frame1 .brain1').css('opacity', 1);
+          $('.frame1 .brain1').transition({scale: 1, marginTop: '-130px'}, 400,function(){
+            $('.title2').delay(600).transition({scale: 1, opacity: 1}, function() {
+              $('.title3').transition({width: '640px', left: '0px', duration: 270}, function() {
+                $('.title4').transition({height: '48px', top: '822px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
+                  setTimeout(frame2, 1300);
+                });
+              });
+            });            
+          });
+
+
+        })
+      });
+    }
+
+    function frame2() {
+      // deinit frame1
+      $('.frame1')
+        .find('.head1, .brain1, .title2, .title3, .title4').transition({opacity: 0}, 120).end()
+        .find('.title1').transition({opacity: 0, marginTop: '-500px'}, 250);
+      // start frame 2
+      $('.frame2')
+        .find('.tileflash').transition({marginTop: '-1700px'}, 700).end()
+        .find('.tile1').delay(200).transition({marginLeft: '200px'}, 400).end()
+        .find('.maintile').delay(200).transition({marginTop: '-1000px'}, 400).end() 
+        .find('.tile2').delay(500).transition({marginTop: '-1000px'}, 400, function() {
+          $('.frame2 .title1')
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'}, function(){
+              setTimeout(frame3, 300);
+            })
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        });
+    }
+
+    function frame3() {
+      // deinit frame1
+      $('.frame2')
+        .find('.tile1').transition({marginLeft: '-800px', marginTop: '-470px'}).end()
+        .find('.maintile').transition({marginLeft: '-800px', marginTop: '-1470px'}).end()
+        .find('.tile2').transition({marginLeft: '-800px', marginTop: '-1470px'}).end()
+        .find('.title1').transition({opacity: 0}, 150, function(){
+          $(this).css('visibility', 'hidden');
+        });
+      $('.frame4')
+        .find('.tile1').transition({marginLeft: '-640px'});
+      // start frame 3
+      $('.frame3')
+        .find('.maintile, .tile3').transition({marginTop: '-1230px', marginLeft: '-560px'}, function(){
+          $(this).transition({scale: 1.15}, 1400, function(){
+            frame4();
+          });
+        }).end()
+        .find('.title1').transition({opacity: 1}, 200, function(){
+          $(this)
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'}, function(){
+              // setTimeout(frame3, 300);
+            })
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        })
+
+    }
+
+    function frame4() {
+      $('.frame3')
+        .find('.maintile, tile3').transition({marginLeft: '-1200px'}).end()
+        .find('.title1').transition({opacity: 0}, 150, function(){
+          $(this).css('visibility', 'hidden');
+        })
+      $('.frame2 .tile2').transition({opacity: 0});
+
+      //start frame4
+      $('.frame4')
+        .find('.maintile, .tile2').transition({marginLeft: '-640px'}).end()
+        .find('.tile1').transition({marginLeft: '-1500px'}, function(){
+          $('.frame4 .maintile').transition({scale: 1.1}, 900, function(){
+            $('.frame4 .medal')
+              .css('visibility', 'visible')
+              .transition({scale: 3}, 0)
+              .transition({scale: 1, opacity: 1}, 200, 'easeInQuad', function(){
+                setTimeout(frame5, 700);
+              });
+            });          
+        }).end()        
+        .find('.title1').transition({opacity: 1}, 200, function(){
+          $(this)
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'}, function(){
+              // setTimeout(frame3, 300);
+            })
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        })
+    }
+
+    function frame5() {
+      $('.frame4')
+        .find('.maintile').transition({marginLeft: '-1280px'}).end()
+        .find('.tile2').transition({marginLeft: '-1480px', marginTop: '200px'}).end()
+        .find('.title1').transition({opacity: 0}, 150, function(){
+          $(this).css('visibility', 'hidden');
+        }).end()
+        .find('.medal').transition({marginLeft: '-640px'}).end()
+        .find('.tile1').transition({marginLeft: '-1900px'}, 300, function(){$(this).css('visibility', 'hidden')}).end();
+
+      //start frame4
+      $('.frame4 .tile2').transition();
+      $('.frame5')
+        .find('.maintile').transition({marginLeft: '-640px'},function(){
+          $('.frame5 .maintile').transition({scale: 1.1}, 888, function(){
+            setTimeout(frame6, 600);
+          });
+        }).end()
+        .find('.tile2').transition({marginLeft: '-570px'}).end()
+        .find('.title1').transition({opacity: 1}, 200, function(){
+          $(this)
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'}, function(){
+              // setTimeout(frame3, 300);
+            })
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        })
+    }
+
+    function frame6() {
+      $('.frame4')
+        .find('.tile2').transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+        });
+      $('.frame5')
+        .find('.maintile, .tile1, .tile2, .title1').transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+        });
+      $('.frame6')
+        .find('.head2, .brain2, .title2-1, .title2-2, .title2-3, .title2-4, .register')
+          .css('visibility', 'visible')
+          .transition({scale: 1.3},0)
+          .transition({scale: 1, opacity: 1},function(){
+            $('.frame6 .register')
+              .transition({scale: 1.2})
+              .delay(300).transition({scale: 1})
+              .delay(600).transition({scale: 1.2})
+              .delay(900).transition({scale: 1});
+          });
+    };
+
+    init();
+    frame1();
+  })
+</script>
+</body>
+</html>
