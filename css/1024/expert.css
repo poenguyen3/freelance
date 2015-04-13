@@ -58,8 +58,9 @@
   height: 259px;
   position: absolute;
   top: 410px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
+  text-align: center;
 }
 .expert .frame1 .title2 {
   width: 238px;
@@ -219,7 +220,7 @@
   height: 259px;
   position: absolute;
   top: 145px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
 }
 .expert .frame4 .title2-2 {

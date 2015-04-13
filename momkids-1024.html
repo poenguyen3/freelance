@@ -13,8 +13,8 @@
         <div class="title1"><img src="images/1024/momkids/main-title0.png"></div>
         <div class="mini-tile"><img src="images/1024/mini-tiles.png"/></div>
         <div class="head1"><img src="images/1024/head.png" /></div>
-        <div class="brain1"><img src="images/1024/brain.png" /></div>
-        <div class="title2"><img src="images/1024/main-title1.png"></div>
+        <div class="brain1"><img src="images/gif/gif-02.gif" /></div>
+        <div class="title2"><img src="images/gif/gif-03.gif"></div>
         <div class="title3 fit-img"><img src="images/1024/main-title2.png"></div>
         <div class="title4"><img src="images/1024/main-title3.png"></div>
       </div>
@@ -28,8 +28,8 @@
       <div class="frame3">
         <div class="maintile">
           <div class="tile1"><img src="images/1024/white-tile.png"/></div>
-          <img src="images/1024/momkids/frame3-tile1.png">
-          <div class="dino"><img src="images/1024/momkids/frame3-dina.png"/></div>
+          <!--<img src="images/1024/momkids/frame3-tile1.png">-->
+          <div class="dino"><img src="images/gif/gif-05.gif"/></div>
         </div>
         <div class="title1 fit-img"><img src="images/1024/momkids/frame3-title1.png"></div>
       </div>
@@ -44,7 +44,7 @@
       <div class="frame5">
         <div class="maintile">
           <div class="tile1"><img src="images/1024/white-tile.png"/></div>
-          <img src="images/1024/momkids/frame5-tile1.png">
+          <img class="box-gif" src="images/gif/gif-06.gif">
         </div>
         <div class="title1 fit-img"><img src="images/1024/momkids/frame5-title1.png"></div>
       </div>
@@ -60,8 +60,8 @@
         <div class="title2-1"><img src="images/1024/main-title6.png"></div>
         <div class="mini-tile2"><img src="images/1024/mini-tiles.png"/></div>
         <div class="head2-1"><img src="images/1024/head.png" /></div>
-        <div class="brain2-1"><img src="images/1024/brain.png" /></div>
-        <div class="title2-2"><img src="images/1024/main-title1.png"></div>
+        <div class="brain2-1"><img src="images/gif/gif-02.gif" /></div>
+        <div class="title2-2"><img src="images/gif/gif-03.gif"></div>
         <div class="title2-3 fit-img"><img src="images/1024/main-title2.png"></div>
         <div class="title2-4"><img src="images/1024/main-title3.png"></div>
         <div class="register fit-img"><img src="images/1024/register.png"></div>
@@ -163,18 +163,18 @@
           .transition({scale: 0.9}, 0)
           .transition({top: '80px', left: '20px'}, changeFrameDuration, changeFrameEasing, function(){
           $(this).transition({scale: 1}, 1400, function(){
-            $(this).find('.dino').transition({rotate: '-8deg'}, 700, function(){
-              $(this).transition({rotate: '8deg'}, 700, function(){
-                $(this).transition({rotate: '-8deg'}, 700, function(){
-                  $(this).transition({rotate: '8deg'}, 700, function(){                 
-                    $(this).transition({rotate: '-8deg'}, 700, function(){                 
-                      $(this).transition({rotate: '8deg'}, 700, function(){                 
+            $(this).find('.dino').transition({rotate: '0deg'}, 700, function(){
+              //$(this).transition({rotate: '8deg'}, 700, function(){
+                //$(this).transition({rotate: '-8deg'}, 700, function(){
+                  //$(this).transition({rotate: '8deg'}, 700, function(){                 
+                    //$(this).transition({rotate: '-8deg'}, 700, function(){                 
+                     // $(this).transition({rotate: '8deg'}, 700, function(){                 
                         frame4(); 
-                      })
-                    })
-                  })
-                })
-              })
+                      //})
+                    //})
+                  //})
+                //})
+              //})
             })
           });
         }).end()

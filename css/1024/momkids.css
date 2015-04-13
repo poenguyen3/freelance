@@ -58,8 +58,9 @@
   height: 259px;
   position: absolute;
   top: 410px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
+  text-align: center;
 }
 .momkids .frame1 .title2 {
   width: 238px;
@@ -151,7 +152,7 @@
   width: 1024;
   height: 618px;
   position: absolute;
-  left:0px;
+  left: -100px;
   top:0px;
 }
 .momkids .frame3 .title1 {
@@ -232,6 +233,12 @@
   left: 1024px;
   visibility: hidden;
   position: absolute;
+}
+.momkids .frame5 .box-gif{
+	width: 675px;
+	position: absolute;
+	left: 50%;
+	margin-left: -337.5px;
 }
 .momkids .frame5 .maintile .tile1{
   width: 1024px;

@@ -58,8 +58,9 @@
   height: 259px;
   position: absolute;
   top: 410px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
+  text-align: center;
 }
 .prenants .frame1 .title2 {
   width: 238px;
@@ -96,7 +97,7 @@
   height: 605px;
   position: absolute;
   top: 800px;
-  left: -167px;
+  left: -90px;
   visibility: hidden;
   position: absolute;
 }
@@ -254,6 +255,11 @@
   visibility: hidden;
   position: absolute;
 }
+.prenants .frame5 .maintile .box-gif{
+	width: 580px;
+	position: relative;
+	left: 130px;
+}
 .prenants .frame5 .maintile .tile1 {
   width: 1024px;
   height: 618px;
@@ -315,8 +321,9 @@
   height: 259px;
   position: absolute;
   top: 145px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
+  text-align: center;
 }
 .prenants .frame6 .title2-2 {
   width: 238px;

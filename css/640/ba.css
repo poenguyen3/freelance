@@ -43,6 +43,7 @@
   top: 430px;
   left: 127px;
   opacity: 0;
+  text-align: center;
 }
 .ba .frame1 .title2 {
   width: 640px;
@@ -52,6 +53,7 @@
   left: 0px;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 .ba .frame1 .title3 {
   width: 0px;
@@ -91,6 +93,9 @@
   top: 1200px;
   left: 0px;
 }
+.ba .frame2 .maintile  img{
+	width: 640px;
+}
 .ba .frame2 .tile2 {
   width: 640px;
   height: 503px;
@@ -125,6 +130,10 @@
   position: absolute;
   top: 1430px;
   left: 560px;
+  text-align: center;
+}
+.ba .frame3 .maintile img{
+	width: 75%;
 }
 .ba .frame3 .tile2 {
   width: 640px;
@@ -160,6 +169,12 @@
   position: absolute;
   top: 200px;
   left: 640px;
+}
+.ba .frame4 .maintile img{
+	width: 540px;
+	position: relative;
+	left: 50%;
+	margin-left: -270px;
 }
 .ba .frame4 .tile1 {
   width: 640px;
@@ -264,10 +279,11 @@
   width: 395px;
   height: 395px;
   position: absolute;
-  top: 192px;
+  top: 300px;
   left: 127px;
   visibility: hidden;
   opacity: 0;
+  text-align: center;
 }
 .ba .frame6 .title2-2 {
   width: 640px;
@@ -277,6 +293,7 @@
   left: 0px;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 .ba .frame6 .title2-3 {
   width: 0px;

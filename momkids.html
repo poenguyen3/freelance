@@ -12,14 +12,14 @@
       <div class="frame1">
         <div class="title1"><img src="images/640/momkids/title1.png"></div>
         <div class="head1"><img src="images/640/frame1-head.png" /></div>
-        <div class="brain1"><img src="images/640/frame1-brain.png" /></div>
-        <div class="title2"><img src="images/640/title2.png"></div>
+        <div class="brain1"><img src="images/gif/gif-02.gif" /></div>
+        <div class="title2"><img src="images/gif/gif-03.gif"></div>
         <div class="title3 fit-img"><img src="images/640/title3.png"></div>
         <div class="title4"><img src="images/640/title4.png"></div>
       </div>
       <div class="frame2">
         <div class="maintile">
-          <img src="images/640/momkids/frame2-tile1.png">
+          <img src="images/gif/gif-04.gif">
           <div class="tile tile1">
             <img src="images/640/white-tile.png">
           </div>
@@ -29,8 +29,7 @@
       </div>
       <div class="frame3">
         <div class="maintile">
-          <div class="dino"><img src="images/640/momkids/frame3-dinasour.png"/></div>
-          <img src="images/640/momkids/frame3-tile1.png">
+          	<img class="dino" src="images/gif/gif-05.gif">
           <div class="tile1"><img src="images/640/white-tile.png"></div>
         </div>
         <div class="title1 fit-img"><img src="images/640/momkids/frame3-title1.png"></div>
@@ -45,7 +44,7 @@
       </div>
       <div class="frame5">
         <div class="maintile">
-          <img src="images/640/momkids/frame5-tile1.png">
+          <img class="box-gif" src="images/gif/gif-06.gif">
           <div class="tile1"><img src="images/640/white-tile.png"></div>
           <div class="tile2"><img src="images/640/white-tile.png"></div>
         </div>
@@ -62,8 +61,8 @@
        <div class="frame7">
         <div class="title2-1"><img src="images/640/frame6-title1.png"></div>
         <div class="head2"><img src="images/640/frame1-head.png" /></div>
-        <div class="brain2"><img src="images/640/frame1-brain.png" /></div>
-        <div class="title2-2"><img src="images/640/title2.png"></div>
+        <div class="brain2"><img src="images/gif/gif-02.gif" /></div>
+        <div class="title2-2"><img src="images/gif/gif-03.gif"></div>
         <div class="title2-3 fit-img"><img src="images/640/title3.png"></div>
         <div class="title2-4"><img src="images/640/title4.png"></div>
         <div class="register fit-img"><img src="images/640/frame6-registerBtn.png"/></div>
@@ -100,7 +99,7 @@
           $('.frame1 .head1').transition({marginTop: '-130px'}, 400);
           
           $('.frame1 .brain1').css('opacity', 1);
-          $('.frame1 .brain1').transition({scale: 1, marginTop: '-130px'}, 400,function(){
+          $('.frame1 .brain1').transition({scale: 1, marginTop: '-30px'}, 400,function(){
             $('.title2').delay(300).transition({scale: 1, opacity: 1}, function() {
               $('.title3').transition({width: '640px', left: '0px', duration: 270}, function() {
                 $('.title4').transition({height: '48px', top: '822px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
@@ -151,18 +150,18 @@
       //start frame3
       $('.frame3')
         .find('.maintile').transition({marginLeft: '-640px'}, changeFrameDuration, changeFrameEasing, function(){
-          $(this).find('.dino').transition({rotate: '-8deg'}, 700, function(){
-            $(this).transition({rotate: '8deg'}, 700, function(){
-              $(this).transition({rotate: '-8deg'}, 700, function(){
-                $(this).transition({rotate: '8deg'}, 700, function(){                 
-                  $(this).transition({rotate: '-8deg'}, 700, function(){                 
-                    $(this).transition({rotate: '8deg'}, 700, function(){                 
+          $(this).find('.dino').transition({opacity: '1'}, 2000, function(){
+            //$(this).transition({rotate: '8deg'}, 700, function(){
+              //$(this).transition({rotate: '-8deg'}, 700, function(){
+                //$(this).transition({rotate: '8deg'}, 700, function(){                 
+                  //$(this).transition({rotate: '-8deg'}, 700, function(){                 
+                    //$(this).transition({rotate: '8deg'}, 700, function(){                 
                       frame4(); 
-                    })
-                  })
-                })
-              })
-            })
+                    //})
+                  //})
+                //})
+              //})
+            //})
           })
         }).end()
         .find('.title1').transition({opacity: 1}, 200, function(){

@@ -58,7 +58,7 @@
   height: 259px;
   position: absolute;
   top: 410px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
 }
 .ba .frame1 .title2 {
@@ -96,7 +96,7 @@
   height: 605px;
   position: absolute;
   top: 800px;
-  left: -167px;
+  left: -93px;
   visibility: hidden;
   position: absolute;
 }
@@ -147,6 +147,7 @@
   left: 1024px;
   visibility: hidden;
   position: absolute;
+  text-align: center;
 }
 .ba .frame3 .maintile .tile1 {
   width: 1024px;
@@ -188,6 +189,13 @@
   left: 1024px;
   visibility: hidden;
   position: absolute;
+}
+.ba .frame4 .maintile .box-gif{
+	width: 580px;
+	position: relative;
+	left: 50%;
+	top: 50px;
+	margin-left: -290px;
 }
 .ba .frame4 .maintile .tile1 {
   width: 1024px;
@@ -309,8 +317,11 @@
   height: 259px;
   position: absolute;
   top: 145px;
-  left: 340px;
+  left: 330px;
   opacity: 0;
+}
+.ba .frame6 .brain2-1 img{
+	width: 100%;
 }
 .ba .frame6 .title2-2 {
   width: 238px;

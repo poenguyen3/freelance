@@ -49,6 +49,7 @@
   top: 430px;
   left: 127px;
   opacity: 0;
+  text-align: center;
 }
 .expert .frame1 .title2 {
   width: 640px;
@@ -58,6 +59,7 @@
   left: 0px;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 .expert .frame1 .title3 {
   width: 0px;
@@ -183,8 +185,8 @@
   width: 395px;
   height: 395px;
   position: absolute;
-  top: 192px;
-  left: 127px;
+  top: 300px;
+  left: 150px;
   visibility: hidden;
   opacity: 0;
 }
@@ -196,6 +198,7 @@
   left: 0px;
   opacity: 0;
   visibility: hidden;
+  text-align: center;
 }
 .expert .frame4 .title2-3 {
   width: 0px;
