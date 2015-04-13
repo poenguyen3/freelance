@@ -1,0 +1,378 @@
+/* general */
+.banner-container {
+  margin:auto;
+  overflow: hidden;
+}
+.size-640 {
+  width: 640px;
+  height: 960px;
+  background-image: url(../../images/640/bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  position: relative;
+}
+.fit-img img {
+  width:100%;
+  height: 100%;
+}
+
+
+/* preanants */
+.prenants .title1{
+  width: 640px;
+  height: 187px;
+  position: absolute;
+  top: 350px;
+  left: 0px;
+}
+.prenants .frame1 .head1 {
+  width: 640px;
+  height: 478px;
+  position: absolute;
+  top: 510px;
+  left: 0px;
+  opacity: 0;
+}
+.prenants .frame1 .brain1 {
+  width: 395px;
+  height: 395px;
+  position: absolute;
+  top: 430px;
+  left: 127px;
+  opacity: 0;
+}
+.prenants .frame1 .title2 {
+  width: 640px;
+  height: 213px;
+  position: absolute;
+  top: 620px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.prenants .frame1 .title3 {
+  width: 0px;
+  height: 64px;
+  position: absolute;
+  top: 797px;
+  left: 320px;
+}
+.prenants .frame1 .title4 {
+  width: 640px;
+  height: 0px;
+  position: absolute;
+  top: 800px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.prenants .frame2 .tileflash {
+  width: 640px;
+  height: 503px;
+  position: absolute;
+  top: 1000px;
+  left: 0px;
+}
+
+.prenants .frame2 .tile1 {
+  width: 640px;
+  height: 503px;
+  position: absolute;
+  top: 0px;
+  left: -608px;
+}
+.prenants .frame2 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 1200px;
+  left: 0px;
+}
+.prenants .frame2 .tile2 {
+  width: 640px;
+  height: 503px;
+  top: 1455px;
+  left: 400px;
+  position: absolute;
+}
+.prenants .frame2 .title1 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+.prenants .frame3 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 1430px;
+  left: 560px;
+}
+.prenants .frame3 .tile2 {
+  width: 640px;
+  height: 503px;
+  top: 1925px;
+  left: 1200px;
+  position: absolute;
+}
+.prenants .frame3 .title1 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+.prenants .frame4 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 200px;
+  left: 640px;
+}
+.prenants .frame4 .tile1 {
+  width: 640px;
+  height: 503px;
+  top: 468px;
+  /*left: 439px;*/
+  left: 1079px;
+  position: absolute;
+}
+.prenants .frame4 .tile2 {
+  width: 640px;
+  height: 503px;
+  top: -126px;
+  /*left: 384px;*/
+  left: 1024px;
+  position: absolute;
+}
+.prenants .frame4 .title1 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+.prenants .frame4 .medal {
+  width: 220px;
+  height: 207px;
+  position: absolute;
+  top: 490px;
+  left: 400px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.prenants .frame5 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 200px;
+  left: 640px;
+}
+.prenants .frame5 .tile2 {
+  width: 640px;
+  height: 503px;
+  top: 374px;
+  /*left: 384px;*/
+  left: 1024px;
+  position: absolute;
+}
+.prenants .frame5 .title1 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+.prenants .frame6 .title2-1{
+  width: 640px;
+  height: 187px;
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.prenants .frame6 .head2 {
+  width: 640px;
+  height: 478px;
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.prenants .frame6 .brain2 {
+  width: 395px;
+  height: 395px;
+  position: absolute;
+  top: 192px;
+  left: 127px;
+  visibility: hidden;
+  opacity: 0;
+}
+.prenants .frame6 .title2-2 {
+  width: 640px;
+  height: 213px;
+  position: absolute;
+  top: 506px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.prenants .frame6 .title2-3 {
+  width: 0px;
+  height: 64px;
+  position: absolute;
+  top: 683px;
+  visibility: hidden;
+}
+.prenants .frame6 .title2-4 {
+  width: 640px;
+  /*height: 43px;*/
+  height:0px;
+  position: absolute;
+  top: 707px;
+  left: 0px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.prenants .frame6 .register {
+  width: 640px;
+  height: 107px;
+  position: absolute;
+  top: 767px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+.register.animated {
+  -webkit-animation: registerAnimate  1s infinite;
+  -moz-animation: registerAnimate 1s infinite;
+  -o-animation: registerAnimate 1s infinite;
+  -ms-animation: registerAnimate  1s infinite;
+  animation: registerAnimate 1s infinite;
+}
+
+@-webkit-keyframes registerAnimate{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes registerAnimate{
+  0% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.15);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes registerAnimate{
+  0% {
+    -o-transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(1.15);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@-ms-keyframes registerAnimate{
+  0% {
+    -ms-transform: scale(1);
+  }
+  50% {
+    -ms-transform: scale(1.15);
+  }
+  100% {
+    -ms-transform: scale(1);
+  }
+}
+@keyframes registerAnimate{
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/*momkids*/
+

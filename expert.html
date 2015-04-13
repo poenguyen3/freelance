@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expert</title>
+  <link rel="stylesheet" type="text/css" href="css/640/expert.css">
+</head>
+<body>
+
+<div class="banner-container size-640 expert">
+  <div class="wrapper">
+    <div class="inner">
+      <div class="frame1">
+        <div class="title1"><img src="images/640/expert/title1.png"></div>
+        <div class="head1"><img src="images/640/frame1-head.png" /></div>
+        <div class="brain1"><img src="images/640/frame1-brain.png" /></div>
+        <div class="title2"><img src="images/640/title2.png"></div>
+        <div class="title3 fit-img"><img src="images/640/title3.png"></div>
+        <div class="title4"><img src="images/640/title4.png"></div>
+      </div>
+      <div class="frame2">
+        <div class="maintile">
+          <img src="images/640/expert/frame2-tile1.png">
+          <div class="tile tile1">
+            <img src="images/640/white-tile.png">
+          </div>
+        </div>
+        <div class="tile2"><img src="images/640/white-tile.png"></div>
+        <div class="title1 fit-img"><img src="images/640/expert/frame2-title1.png"></div>
+      </div>
+      <div class="frame3">
+        <div class="maintile">
+          <img class="e1" src="images/640/expert/frame3-tile1.png">
+          <img class="expert e2" src="images/640/expert/frame3-tile2.png">
+          <img class="expert e3" src="images/640/expert/frame3-tile3.png">
+          <img class="expert e4" src="images/640/expert/frame3-tile4.png">
+          <div class="tile tile1"><img src="images/640/white-tile.png"></div>
+        </div>
+        <div class="title1 fit-img"><img src="images/640/expert/frame3-title1.png"></div>
+        <div class="title1-2 fit-img"><img src="images/640/expert/frame3-title2.png"></div>
+        <div class="title1-3 fit-img"><img src="images/640/expert/frame3-title3.png"></div>
+        <div class="title1-4 fit-img"><img src="images/640/expert/frame3-title4.png"></div>
+      </div>     
+       <div class="frame4">
+        <div class="title2-1"><img src="images/640/frame6-title1.png"></div>
+        <div class="head2"><img src="images/640/frame1-head.png" /></div>
+        <div class="brain2"><img src="images/640/frame1-brain.png" /></div>
+        <div class="title2-2"><img src="images/640/title2.png"></div>
+        <div class="title2-3 fit-img"><img src="images/640/title3.png"></div>
+        <div class="title2-4"><img src="images/640/title4.png"></div>
+        <div class="register fit-img"><img src="images/640/frame6-registerBtn.png"/></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------ Scripts -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var changeFrameDuration = 550;
+    var changeFrameEasing = 'easeInQuad';
+    var frameDelay = 1000;
+    var fastFrameDelay = 400;
+    var registerTimeout = null;
+    function init() {
+      // frame 1
+      $('.frame1 .title1').transition({scale: 0.2, duration: 0});
+      $('.frame1 .brain1').transition({scale: 0.8, duration: 0});
+      $('.frame1 .title2').transition({scale: 2, duration: 0});
+      $('.frame1 .title2').css('visibility','visible');
+    }
+
+    // frame 1
+    function frame1() {
+      $('.frame1 .title1').transition({ scale: 1.3}, function(){
+        $('.frame1 .title1').transition({ scale: 1}, 400, 'easeInQuad', function(){
+          $('.frame1 .title1').transition({marginTop: '-130px'});
+          
+          $('.frame1 .head1').css('opacity', 1);
+          $('.frame1 .head1').transition({marginTop: '-130px'}, 400);
+          
+          $('.frame1 .brain1').css('opacity', 1);
+          $('.frame1 .brain1').transition({scale: 1, marginTop: '-130px'}, 400,function(){
+            $('.title2').delay(300).transition({scale: 1, opacity: 1}, function() {
+              $('.title3').transition({width: '640px', left: '0px', duration: 270}, function() {
+                $('.title4').transition({height: '48px', top: '822px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
+                  setTimeout(frame2, frameDelay + 200);
+                });
+              });
+            });            
+          });
+
+
+        })
+      });
+    }
+
+    function frame2() {
+      // deinit frame1
+      $('.frame1')
+        .find('.head1, .brain1, .title2, .title3, .title4').transition({opacity: 0}, 120).end()
+        .find('.title1').transition({opacity: 0, marginTop: '-500px'}, 250);
+      // start frame 3
+      $('.frame2')
+        .find('.maintile').transition({marginTop: '-1230px', marginLeft: '-560px'}, changeFrameDuration, changeFrameEasing, function(){          
+          setTimeout(frame3, frameDelay);
+        }).end()
+        .find('.title1').transition({opacity: 1}, 200, function(){
+          $(this)
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'})
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        })
+    }
+
+    function frame3() {
+      $('.frame2')
+        .find('.maintile').transition({marginLeft: '-1200px'}, changeFrameDuration, changeFrameEasing).end()
+        .find('.maintile .tile1').transition({marginLeft: '240px', marginTop: '-710px'}).end()
+        .find('.title1').transition({opacity: 0}, 150, function(){
+          $(this).css('visibility', 'hidden');
+        })
+
+      //start frame3
+      $('.frame3')
+        .find('.maintile').transition({marginLeft: '-640px'}, changeFrameDuration, changeFrameEasing, function(){
+          frame3Ex2($(this));
+          // setTimeout(frame4, frameDelay);
+        }).end()
+        .find('.title1').transition({opacity: 1}, 200, function(){
+          $(this)
+            .css('visibility', 'visible')
+            .transition({scale: 1.4}, 0)
+            .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'})
+            .css({
+              'filter': 'blur(0px)',
+              'webkitFilter': 'blur(0px)',
+              'mozFilter': 'blur(0px)',
+              'msFilter': 'blur(0px)',
+              'oFilter': 'blur(0px)'
+            });
+        })
+    }
+
+    function frame3Ex2(maintile) {      
+      maintile
+        .find('.e1').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e2')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              frame3Ex3(maintile);
+            })
+          $('.frame3')
+            .find('.title1').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-2').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'})
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+        })
+    }
+    function frame3Ex3(maintile) {
+      maintile
+        .find('.e2').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e3')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              frame3Ex4(maintile);
+            })
+          $('.frame3')
+            .find('.title1-2').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-3').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'})
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+
+        })
+    }
+    function frame3Ex4(maintile) {
+      maintile
+        .find('.e3').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e4')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              setTimeout(frame4, frameDelay);
+            })
+          $('.frame3')
+            .find('.title1-3').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-4').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-20px', left: '0px', width: '640px', height: '107px'})
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+        })
+    }
+
+   
+    function frame4() {
+      $('.frame3')
+        .find('.maintile, .title1-4').transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+        });
+      $('.frame2 .tile1').transition({opacity: 0}, function(){
+        $(this).css('visibility', 'hidden');
+      })
+      $('.frame4')
+        .find('.head2, .brain2, .title2-1, .title2-2, .title2-3, .title2-4, .register')
+          .css('visibility', 'visible');
+      $('.frame4 .title2-1').transition({marginTop: '-130px',opacity: 1});
+      $('.frame4 .head2, .frame4 .brain2, .frame4 .title2-2').transition({scale: 1.3}, 0).transition({opacity: 1, scale: 1});
+      
+      $('.frame4 .brain2').css('opacity', 1);
+      $('.title2-2').delay(300).transition({scale: 1, opacity: 1}, function() {
+        $('.title2-3').transition({width: '640px', left: '0px', duration: 270}, function() {
+          $('.title2-4').transition({height: '48px', top: '710px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
+          });
+        });
+      });
+      $('.frame4 .register').transition({opacity: 1, scale: 1}, 200).addClass('animated');
+      clearTimeout(registerTimeout);
+      registerTimeout = setTimeout(function(){
+        $('.frame4 .register').removeClass('animated');
+      }, 5 * 1000);
+    }
+
+    init();
+    frame1();
+  })
+</script>
+</body>
+</html>

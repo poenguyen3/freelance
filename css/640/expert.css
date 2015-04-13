@@ -1,0 +1,297 @@
+/* general */
+.banner-container {
+  margin:auto;
+  overflow: hidden;
+}
+.size-640 {
+  width: 640px;
+  height: 960px;
+  background-image: url(../../images/640/bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  position: relative;
+}
+.fit-img img {
+  width:100%;
+  height: 100%;
+}
+.maintile .tile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
+/* preanants */
+.expert .title1{
+  width: 640px;
+  height: 187px;
+  position: absolute;
+  top: 350px;
+  left: 0px;
+}
+.expert .frame1 .head1 {
+  width: 640px;
+  height: 478px;
+  position: absolute;
+  top: 510px;
+  left: 0px;
+  opacity: 0;
+}
+.expert .frame1 .brain1 {
+  width: 395px;
+  height: 395px;
+  position: absolute;
+  top: 430px;
+  left: 127px;
+  opacity: 0;
+}
+.expert .frame1 .title2 {
+  width: 640px;
+  height: 213px;
+  position: absolute;
+  top: 620px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.expert .frame1 .title3 {
+  width: 0px;
+  height: 64px;
+  position: absolute;
+  top: 797px;
+  left: 320px;
+}
+.expert .frame1 .title4 {
+  width: 640px;
+  height: 0px;
+  position: absolute;
+  top: 800px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.expert .frame2 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 1430px;
+  left: 560px;
+}
+.frame2 .maintile .tile1 {
+  margin-top: -780px;
+  margin-left: 360px;
+}
+.expert .frame2 .tile2 {
+  width: 640px;
+  height: 503px;
+  top: 1925px;
+  left: 1200px;
+  position: absolute;
+}
+.expert .frame2 .title1 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+.expert .frame3 .maintile {
+  width: 640px;
+  height: 495px;
+  position: absolute;
+  top: 200px;
+  left: 640px;
+}
+.expert .frame3 .maintile .tile1{
+  width: 640px;
+  height: 503px;
+  position: absolute;
+  top: 310px;
+  left: 372px;
+}
+.expert .frame3 .maintile img.expert {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.expert .frame3 .title1,
+.expert .frame3 .title1-2,
+.expert .frame3 .title1-3,
+.expert .frame3 .title1-4 {
+  width: 1480px;
+  /*height: 107px;*/
+  height: 64px;
+  top: 760px;
+  left: -420px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+.expert .frame4 .title2-1{
+  width: 640px;
+  height: 187px;
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.expert .frame4 .head2 {
+  width: 640px;
+  height: 478px;
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.expert .frame4 .brain2 {
+  width: 395px;
+  height: 395px;
+  position: absolute;
+  top: 192px;
+  left: 127px;
+  visibility: hidden;
+  opacity: 0;
+}
+.expert .frame4 .title2-2 {
+  width: 640px;
+  height: 213px;
+  position: absolute;
+  top: 506px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.expert .frame4 .title2-3 {
+  width: 0px;
+  height: 64px;
+  position: absolute;
+  top: 683px;
+  left: 320px;
+  visibility: hidden;
+}
+.expert .frame4 .title2-4 {
+  width: 640px;
+  /*height: 43px;*/
+  height:0px;
+  position: absolute;
+  top: 707px;
+  left: 0px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.expert .frame4 .register {
+  width: 640px;
+  height: 107px;
+  position: absolute;
+  top: 767px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+.register.animated {
+  -webkit-animation: registerAnimate  1s infinite;
+  -moz-animation: registerAnimate 1s infinite;
+  -o-animation: registerAnimate 1s infinite;
+  -ms-animation: registerAnimate  1s infinite;
+  animation: registerAnimate 1s infinite;
+}
+
+@-webkit-keyframes registerAnimate{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes registerAnimate{
+  0% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.15);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes registerAnimate{
+  0% {
+    -o-transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(1.15);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@-ms-keyframes registerAnimate{
+  0% {
+    -ms-transform: scale(1);
+  }
+  50% {
+    -ms-transform: scale(1.15);
+  }
+  100% {
+    -ms-transform: scale(1);
+  }
+}
+@keyframes registerAnimate{
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/*expert*/
+

@@ -1,0 +1,424 @@
+/* general */
+.banner-container {
+  margin:auto;
+  overflow: hidden;
+}
+.size-1024 {
+  width: 1024px;
+  height: 768px;
+  background-image: url(../../images/1024/bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  position: relative;
+  width:100%;
+  height:100%;
+}
+.fit-img img {
+  width:100%;
+  height: 100%;
+}
+.maintile .tile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
+/* preanants */
+.ba .frame1 .title1{
+  width: 1024px;
+  height: 129px;
+  position: absolute;
+  top: 278px;
+  left: 0px;
+}
+.ba .frame1 .head1 {
+  width: 1024px;
+  height: 502px;
+  position: absolute;
+  top: 390px;
+  left: 0px;
+  opacity: 0;
+}
+.ba .frame1 .mini-tile {
+  width: 1024px;
+  height: 502px;
+  position: absolute;
+  top: 175px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.ba .frame1 .brain1 {
+  width: 325px;
+  height: 259px;
+  position: absolute;
+  top: 410px;
+  left: 340px;
+  opacity: 0;
+}
+.ba .frame1 .title2 {
+  width: 238px;
+  height: 209px;
+  position: absolute;
+  top: 440px;
+  left: 380px;
+  opacity: 0;
+  visibility: hidden;
+}
+.ba .frame1 .title3 {
+  width: 0px;
+  /*width: 366px*/
+  height: 101px;
+  position: absolute;
+  top: 610px;
+  margin-left:-20px;  
+  /*left: 329px;*/
+  left: 512px;
+}
+.ba .frame1 .title4 {
+  width: 366px;
+  /*height: 101px;*/
+  height: 0px;
+  position: absolute;
+  top: 570px;
+  left: 329px;
+  margin-left: -20px;
+  overflow: hidden;
+}
+
+.ba .frame2 .maintile {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 800px;
+  left: -167px;
+  visibility: hidden;
+  position: absolute;
+}
+.ba .frame2 .maintile .tile1 {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 302px;
+  left: 526px;
+  opacity: 0;
+}
+.ba .frame2 .tileflash {
+  width: 1024px;
+  height: 618px;
+  top: 768px;
+  left: -100px;
+  position: absolute;
+  visibility: hidden;
+}
+.ba .frame2 .title1 {
+  width: 2048px;
+  /*height: 107px;*/
+  height: 40px;
+  top: 615px;
+  left: -512px;
+  margin-left: 8px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+.ba .frame3 .maintile {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 800px;
+  left: 1024px;
+  visibility: hidden;
+  position: absolute;
+}
+.ba .frame3 .maintile .tile1 {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: -300px;
+  left: -544px;
+  opacity: 0;
+}
+.ba .frame3 .title1 {
+  width: 2048px;
+  /*height: 107px;*/
+  height: 40px;
+  top: 615px;
+  left: -512px;
+  margin-left: 8px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+
+.ba .frame4 .maintile {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 0px;
+  left: 1024px;
+  visibility: hidden;
+  position: absolute;
+}
+.ba .frame4 .maintile .tile1 {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 300px;
+  left: -540px;
+  opacity: 0;
+}
+.ba .frame4 .medal {
+  width: 218px;
+  height: 223px;
+  position: absolute;
+  top: 280px;
+  left: 420px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.ba .frame4 .title1 {
+  width: 2048px;
+  /*height: 107px;*/
+  height: 40px;
+  top: 615px;
+  left: -512px;
+  margin-left: 8px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+.ba .frame5 .maintile {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 800px;
+  left: 1024px;
+  visibility: hidden;
+  position: absolute;
+}
+.ba .frame5 .maintile .tile1 {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: -300px;
+  left: -540px;
+  opacity: 0;
+}
+.ba .frame5 .maintile .tile2 {
+  width: 1024px;
+  height: 605px;
+  position: absolute;
+  top: 200px;
+  left: 590px;
+  opacity: 0;
+}
+.ba .frame5 .title1 {
+  width: 2048px;
+  /*height: 107px;*/
+  height: 40px;
+  top: 615px;
+  left: -512px;
+  margin-left: 8px;
+  position: absolute;
+  visibility: hidden;
+
+  -webkit-filter: blur(6px);
+  /*-moz-filter: blur(6px);*/
+  -o-filter: blur(6px);
+  /*filter: blur(6px);*/
+
+
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  -moz-transition: -moz-filter 0.3s ease-out;
+  -o-transition: -o-filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+}
+
+
+.ba .frame6 .title2-1{
+  width: 1024px;
+  height: 129px;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.ba .frame6 .head2-1 {
+  width: 1024px;
+  height: 502px;
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  opacity: 0;
+}
+.ba .frame6 .mini-tile2 {
+  width: 1024px;
+  height: 502px;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.ba .frame6 .brain2-1 {
+  width: 325px;
+  height: 259px;
+  position: absolute;
+  top: 145px;
+  left: 340px;
+  opacity: 0;
+}
+.ba .frame6 .title2-2 {
+  width: 238px;
+  height: 209px;
+  position: absolute;
+  top: 350px;
+  left: 380px;
+  opacity: 0;
+  visibility: hidden;
+}
+.ba .frame6 .title2-3 {
+  width: 0px;
+  /*width: 366px*/
+  height: 101px;
+  position: absolute;
+  top: 520px;
+  margin-left:-20px;  
+  /*left: 329px;*/
+  left: 512px;
+}
+.ba .frame6 .title2-4 {
+  width: 366px;
+  /*height: 101px;*/
+  height: 0px;
+  position: absolute;
+  top: 500px;
+  left: 329px;
+  margin-left: -20px;
+  overflow: hidden;
+}
+
+.ba .frame6 .register {
+  width: 1024px;
+  height: 99px;
+  position: absolute;
+  top: 618px;
+  left: -20px;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.register.animated {
+  -webkit-animation: registerAnimate  1s infinite;
+  -moz-animation: registerAnimate 1s infinite;
+  -o-animation: registerAnimate 1s infinite;
+  -ms-animation: registerAnimate  1s infinite;
+  animation: registerAnimate 1s infinite;
+}
+
+@-webkit-keyframes registerAnimate{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes registerAnimate{
+  0% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.15);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes registerAnimate{
+  0% {
+    -o-transform: scale(1);
+  }
+  50% {
+    -o-transform: scale(1.15);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@-ms-keyframes registerAnimate{
+  0% {
+    -ms-transform: scale(1);
+  }
+  50% {
+    -ms-transform: scale(1.15);
+  }
+  100% {
+    -ms-transform: scale(1);
+  }
+}
+@keyframes registerAnimate{
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+/*ba*/
+

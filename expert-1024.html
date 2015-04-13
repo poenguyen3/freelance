@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expert</title>
+  <link rel="stylesheet" type="text/css" href="css/1024/expert.css">
+</head>
+<body>
+
+<div class="banner-container size-1024 expert">
+  <div class="wrapper">
+    <div class="inner">
+      <div class="frame1">
+        <div class="title1"><img src="images/1024/expert/main-title0.png"></div>
+        <div class="mini-tile"><img src="images/1024/mini-tiles.png"/></div>
+        <div class="head1"><img src="images/1024/head.png" /></div>
+        <div class="brain1"><img src="images/1024/brain.png" /></div>
+        <div class="title2"><img src="images/1024/main-title1.png"></div>
+        <div class="title3 fit-img"><img src="images/1024/main-title2.png"></div>
+        <div class="title4"><img src="images/1024/main-title3.png"></div>
+      </div>
+      <div class="frame2">
+        <div class="maintile">
+          <div class="tile1"><img src="images/1024/white-tile.png"/></div>
+          <div class="tile2"><img src="images/1024/white-tile.png"/></div>
+          <img src="images/1024/expert/frame2-tile1.png">
+        </div>
+        <div class="title1 fit-img"><img src="images/1024/expert/frame2-title1.png"></div>
+      </div>
+      <div class="frame3">
+        <div class="maintile">
+          <img class="e1" src="images/1024/expert/frame3-tile1.png">
+          <img class="expert e2" src="images/1024/expert/frame3-tile2.png">
+          <img class="expert e3" src="images/1024/expert/frame3-tile3.png">
+          <img class="expert e4" src="images/1024/expert/frame3-tile4.png">
+          <div class="tile1"><img src="images/1024/white-tile.png"/></div>
+          
+        </div>
+        <div class="title1 fit-img"><img src="images/1024/expert/frame3-title1.png"></div>
+        <div class="title1-2 fit-img"><img src="images/1024/expert/frame3-title2.png"></div>
+        <div class="title1-3 fit-img"><img src="images/1024/expert/frame3-title3.png"></div>
+        <div class="title1-4 fit-img"><img src="images/1024/expert/frame3-title4.png"></div>
+      </div>
+      <div class="frame4">
+        <div class="title2-1"><img src="images/1024/main-title6.png"></div>
+        <div class="mini-tile2"><img src="images/1024/mini-tiles.png"/></div>
+        <div class="head2-1"><img src="images/1024/head.png" /></div>
+        <div class="brain2-1"><img src="images/1024/brain.png" /></div>
+        <div class="title2-2"><img src="images/1024/main-title1.png"></div>
+        <div class="title2-3 fit-img"><img src="images/1024/main-title2.png"></div>
+        <div class="title2-4"><img src="images/1024/main-title3.png"></div>
+        <div class="register fit-img"><img src="images/1024/register.png"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------ Scripts -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var changeFrameDuration = 500;
+    var changeFrameEasing = 'easeInQuad';
+    var frameDelay = 1000;
+    var fastFrameDelay = 400;
+    var registerTimeout = null;
+    function init() {
+      // frame 1
+      $('.frame1 .title1').transition({scale: 0.2, duration: 0});
+      $('.frame1 .brain1').transition({scale: 0.8, duration: 0});
+      $('.frame1 .title2').transition({scale: 2, duration: 0});
+      $('.frame1 .title2').css('visibility','visible');
+    }
+
+    // frame 1
+    function frame1() {
+      $('.frame1 .title1').transition({ scale: 1.3}, function(){
+        $('.frame1 .title1').transition({ scale: 1}, 400, 'easeInQuad', function(){
+          $('.frame1 .title1').transition({marginTop: '-180px'});
+          
+          $('.frame1 .head1').css('opacity', 1);
+          $('.frame1 .head1').transition({marginTop: '-180px'}, 400);
+          $('.frame1 .mini-tile').css('visibility', 'visible').transition({opacity: 1});
+          
+          $('.frame1 .brain1').css('opacity', 1);
+          $('.frame1 .brain1').transition({scale: 1, marginTop: '-180px'}, 400,function(){
+            $('.title2').delay(300).transition({scale: 1, opacity: 1}, function() {
+              $('.title3').transition({width: '366px', left: '329px', duration: 270}, function() {
+                $('.title4').transition({height: '101px', top: '610px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
+                  setTimeout(frame2, frameDelay + 200);
+                });
+              });
+            });            
+          });
+
+
+        })
+      });
+    }
+
+    function frame2() {
+      // deinit frame1
+      $('.frame1')
+        .find('.head1, .brain1, .title2, .title3, .title4, .mini-tile').transition({opacity: 0}, 120).end()
+        .find('.title1').transition({opacity: 0, marginTop: '-500px'}, 250);
+      // start frame 2
+      $('.frame2')
+        .find('.maintile .tile1, .maintile .tile2').transition({opacity: 1}, changeFrameDuration, changeFrameEasing).end()
+        .find('.maintile')
+          .css('visibility', 'visible')
+          .transition({scale: 0.9}, 0)
+          .transition({top: '-60px', left: '-60px'}, changeFrameDuration, changeFrameEasing, function(){
+          $(this).transition({scale: 1}, 1400, function(){
+            setTimeout(frame3, fastFrameDelay);
+          });
+        }).end()
+        .find('.title1')
+          .css('visibility', 'visible')
+          .transition({scale: 1.4}, 0)
+          .transition({scale: 1, marginTop: '-50px', left: '0px', width: '1024px', height: '200px'}, function(){
+            // setTimeout(frame3, frameDelay);
+          })
+          .css({
+            'filter': 'blur(0px)',
+            'webkitFilter': 'blur(0px)',
+            'mozFilter': 'blur(0px)',
+            'msFilter': 'blur(0px)',
+            'oFilter': 'blur(0px)'
+          });
+    }
+
+    function frame3() {
+      // deinit frame1
+      $('.frame2')
+        .find('.maintile, tile3').transition({left: '-1024px', opacity: 0}, changeFrameDuration, changeFrameEasing, function(){
+          $(this).css('visibility', 'hidden')
+        }).end()
+        .find('.title1').transition({opacity: 0}, 150, function(){
+          $(this).css('visibility', 'hidden');
+        })
+
+      //start frame4
+      $('.frame3')
+        .find('.maintile .tile1').transition({opacity: 1}, changeFrameDuration, changeFrameEasing).end()        
+        .find('.maintile')
+          .css('visibility', 'visible')
+          .transition({scale: 0.9}, 0)
+          .transition({top: '-70px', left: '-165px'}, changeFrameDuration, changeFrameEasing, function(){
+          $(this).transition({scale: 1}, 1400, function(){
+            frame3Ex2($(this));
+          });
+        }).end()
+        .find('.title1')
+          .css('visibility', 'visible')
+          .transition({scale: 1.4}, 0)
+          .transition({scale: 1, marginTop: '-50px', left: '0px', width: '1024px', height: '200px'}, function(){
+            // setTimeout(frame3, frameDelay);
+          })
+          .css({
+            'filter': 'blur(0px)',
+            'webkitFilter': 'blur(0px)',
+            'mozFilter': 'blur(0px)',
+            'msFilter': 'blur(0px)',
+            'oFilter': 'blur(0px)'
+          });
+    }
+
+    function frame3Ex2(maintile) {      
+      maintile
+        .find('.e1').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e2')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              frame3Ex3(maintile);
+            })
+          $('.frame3')
+            .find('.title1').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-2').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-50px', left: '0px', width: '1024px', height: '200px'}, function(){
+                  // setTimeout(frame3, frameDelay);
+                })
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+        })
+    }
+    function frame3Ex3(maintile) {
+      maintile
+        .find('.e2').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e3')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              frame3Ex4(maintile);
+            })
+          $('.frame3')
+            .find('.title1-2').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-3').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-50px', left: '0px', width: '1024px', height: '200px'}, function(){
+                  // setTimeout(frame3, frameDelay);
+                })
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+
+        })
+    }
+    function frame3Ex4(maintile) {
+      maintile
+        .find('.e3').delay(frameDelay).transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+          maintile.find('.expert.e4')
+            .transition({scale: 0.8}, 0).css('visibility', 'visible')
+            .transition({opacity: 1}, 300)
+            .transition({scale: 1}, 2000, function(){
+              setTimeout(frame4, frameDelay);
+            })
+          $('.frame3')
+            .find('.title1-3').transition({opacity: 0, scale: 1.2}, function(){
+              $(this).css('visibility', 'hidden');
+            }).end()
+            .find('.title1-4').transition({opacity: 1}, 200, function(){
+              $(this)
+                .css('visibility', 'visible')
+                .transition({scale: 1.4}, 0)
+                .transition({scale: 1, marginTop: '-50px', left: '0px', width: '1024px', height: '200px'}, function(){
+                  // setTimeout(frame3, frameDelay);
+                })
+                .css({
+                  'filter': 'blur(0px)',
+                  'webkitFilter': 'blur(0px)',
+                  'mozFilter': 'blur(0px)',
+                  'msFilter': 'blur(0px)',
+                  'oFilter': 'blur(0px)'
+                });
+            })
+        })
+    }
+
+
+    function frame4() {
+      $('.frame3')
+        .find('.maintile, .title1').transition({opacity: 0, scale: 1.2}, function(){
+          $(this).css('visibility', 'hidden');
+        });
+
+      $('.frame4 .title2-1').css('visibility', 'visible').transition({scale: 1.3}, function(){
+        $('.frame4 .title2-1').transition({opacity: 1, scale: 1, top: '8px'}, 400, 'easeInQuad', function(){          
+          $('.frame4 .head2-1')
+            .transition({scale: 1.2}, 0)
+            .transition({scale: 1, opacity: 1}, 400);
+          $('.frame4 .mini-tile2').css('visibility', 'visible').transition({opacity: 1});
+          
+          $('.frame4 .brain2-1').css('opacity', 1);
+          $('.frame4 .brain2-1').transition({scale: 1}, 400,function(){
+            $('.title2-2')
+              .delay(300).css('visibility', 'visible')
+              .transition({scale: 1.6}, 0)
+              .transition({scale: 1, opacity: 1}, function() {
+              $('.title2-3').transition({width: '366px', left: '329px', duration: 270}, function() {
+                $('.title2-4').transition({height: '101px', top: '525px'}, 360, 'cubic-bezier(0,1,0.5,1.3)', function(){
+                  $('.register')
+                    .css('visibility', 'visible')
+                    .transition({scale: 1.2}, 0)
+                    .transition({scale: 1, opacity: 1}, function(){
+                      $(this).addClass('animated');
+                      clearTimeout(registerTimeout);
+                      registerTimeout = setTimeout(function(){
+                        $('.register').removeClass('animated');
+                      }, 5000)
+                    });                
+                });
+              });
+            });            
+          });
+        })
+      });
+      // $('.frame6')
+      //   .find('.head2, .brain2, .title2-1, .title2-2, .title2-3, .title2-4, .register')
+      //     .css('visibility', 'visible')
+      //     .transition({scale: 1.3},0)
+      //     .transition({scale: 1, opacity: 1},function(){
+      //       $('.frame6 .register')
+      //         .transition({scale: 1.2})
+      //         .delay(300).transition({scale: 1})
+      //         .delay(600).transition({scale: 1.2})
+      //         .delay(900).transition({scale: 1});
+      //     });
+    };
+
+    init();
+    frame1();
+  })
+</script>
+</body>
+</html>
