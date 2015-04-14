@@ -28,7 +28,7 @@
         <div class="maintile"><img src="images/640/prenants/frame3-tile2.png"></div>
         <div class="tile2"><img src="images/640/white-tile.png"></div>
         <div class="title1 fit-img"><img src="images/640/prenants/frame3-title1.png"></div>
-      </div> 
+      </div>
       <div class="frame4">
         <div class="maintile"><img src="images/640/prenants/frame4-tile1.png"></div>
         <div class="tile1"><img src="images/640/white-tile.png"></div>
@@ -59,11 +59,10 @@
 <script type="text/javascript" src="js/jquery.transit.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    var changeFrameDuration = 500;
-    var changeFrameEasing = 'easeInQuad';
-    var frameDelay = 1000;
-    var fastFrameDelay = 400;
     var registerTimeout = null;
+    var frameDelay = 1200;
+    var changeFrameDuration = 700;
+    var changeFrameEasing = 'easeInQuad';
     function init() {
       // frame 1
       $('.frame1 .title1').transition({scale: 0.2, duration: 0});
@@ -77,10 +76,10 @@
       $('.frame1 .title1').transition({ scale: 1.3}, function(){
         $('.frame1 .title1').transition({ scale: 1}, 400, 'easeInQuad', function(){
           $('.frame1 .title1').transition({marginTop: '-130px'});
-          
+
           $('.frame1 .head1').css('opacity', 1);
           $('.frame1 .head1').transition({marginTop: '-130px'}, 400);
-          
+
           $('.frame1 .brain1').css('opacity', 1);
           $('.frame1 .brain1').transition({scale: 1, marginTop: '-25px'}, 400,function(){
             $('.title2').delay(300).transition({scale: 1, opacity: 1}, function() {
@@ -89,7 +88,7 @@
                   setTimeout(frame2, frameDelay + 200);
                 });
               });
-            });            
+            });
           });
 
 
@@ -106,7 +105,7 @@
       $('.frame2')
         .find('.tileflash').transition({marginTop: '-1700px'}, 700).end()
         .find('.tile1').delay(200).transition({marginLeft: '200px'}, changeFrameDuration, changeFrameEasing).end()
-        .find('.maintile').delay(200).transition({marginTop: '-1000px'}, changeFrameDuration, changeFrameEasing).end() 
+        .find('.maintile').delay(200).transition({marginTop: '-1000px'}, changeFrameDuration, changeFrameEasing).end()
         .find('.tile2').delay(500).transition({marginTop: '-1000px'}, changeFrameDuration, changeFrameEasing, function() {
           $('.frame2 .title1')
             .css('visibility', 'visible')
@@ -139,7 +138,7 @@
       $('.frame3')
         .find('.maintile, .tile3').transition({marginTop: '-1230px', marginLeft: '-560px'}, changeFrameDuration, changeFrameEasing, function(){
           $(this).transition({scale: 1.15}, 1400, function(){
-            setTimeout(frame4, fastFrameDelay);
+            setTimeout(frame4, frameDelay);
           });
         }).end()
         .find('.title1').transition({opacity: 1}, 200, function(){
@@ -179,8 +178,8 @@
               .transition({scale: 1, opacity: 1}, 200, 'easeInQuad', function(){
                 setTimeout(frame5, frameDelay);
               });
-            });          
-        }).end()        
+            });
+        }).end()
         .find('.title1').transition({opacity: 1}, 200, function(){
           $(this)
             .css('visibility', 'visible')
@@ -247,7 +246,7 @@
           .css('visibility', 'visible');
       $('.frame6 .title2-1').transition({marginTop: '-130px',opacity: 1});
       $('.frame6 .head2, .frame6 .brain2, .frame6 .title2-2').transition({scale: 1.3}, 0).transition({opacity: 1, scale: 1});
-      
+
       $('.frame6 .brain2').css('opacity', 1);
       $('.title2-2').delay(300).transition({scale: 1, opacity: 1}, function() {
         $('.title2-3').transition({width: '640px', left: '0px', duration: 270}, function() {

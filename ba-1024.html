@@ -67,9 +67,9 @@
 <script type="text/javascript" src="js/jquery.transit.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    var changeFrameDuration = 500;
+    var frameDelay = 1200;
+    var changeFrameDuration = 700;
     var changeFrameEasing = 'easeInQuad';
-    var frameDelay = 1000;
     var fastFrameDelay = 400;
     var registerTimeout = null;
     function init() {
@@ -85,11 +85,11 @@
       $('.frame1 .title1').transition({ scale: 1.3}, function(){
         $('.frame1 .title1').transition({ scale: 1}, 400, 'easeInQuad', function(){
           $('.frame1 .title1').transition({marginTop: '-180px'});
-          
+
           $('.frame1 .head1').css('opacity', 1);
           $('.frame1 .head1').transition({marginTop: '-180px'}, 400);
           $('.frame1 .mini-tile').css('visibility', 'visible').transition({opacity: 1});
-          
+
           $('.frame1 .brain1').css('opacity', 1);
           $('.frame1 .brain1').transition({scale: 1, marginTop: '-180px'}, 400,function(){
             $('.title2').delay(300).transition({scale: 1, opacity: 1}, function() {
@@ -98,7 +98,7 @@
                   setTimeout(frame2, frameDelay + 200);
                 });
               });
-            });            
+            });
           });
 
 
@@ -134,7 +134,7 @@
                 'oFilter': 'blur(0px)'
               });
 
-          }).end() 
+          }).end()
     }
 
     function frame3() {
@@ -250,12 +250,12 @@
         });
 
       $('.frame6 .title2-1').css('visibility', 'visible').transition({scale: 1.3}, function(){
-        $('.frame6 .title2-1').transition({opacity: 1, scale: 1, top: '8px'}, 400, 'easeInQuad', function(){          
+        $('.frame6 .title2-1').transition({opacity: 1, scale: 1, top: '8px'}, 400, 'easeInQuad', function(){
           $('.frame6 .head2-1')
             .transition({scale: 1.2}, 0)
             .transition({scale: 1, opacity: 1}, 400);
           $('.frame6 .mini-tile2').css('visibility', 'visible').transition({opacity: 1});
-          
+
           $('.frame6 .brain2-1').css('opacity', 1);
           $('.frame6 .brain2-1').transition({scale: 1}, 400,function(){
             $('.title2-2')
@@ -273,10 +273,10 @@
                       registerTimeout = setTimeout(function(){
                         $('.register').removeClass('animated');
                       }, 5000)
-                    });                
+                    });
                 });
               });
-            });            
+            });
           });
         })
       });
